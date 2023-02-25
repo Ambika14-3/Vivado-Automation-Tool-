@@ -1,0 +1,74 @@
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 2 CPUs
+INFO: [Timing 38-78] ReportTimingParams: -max_paths 1 -nworst 1 -delay_type max -sort_by slack.
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
+| Date         : Sat Feb 25 20:55:04 2023
+| Host         : LAPTOP-0QK6D3BU running 64-bit major release  (build 9200)
+| Command      : report_timing
+| Design       : top_fsm
+| Device       : 7a35t-cpg236
+| Speed File   : -1  PRODUCTION 1.23 2018-06-13
+------------------------------------------------------------------------------------
+
+Timing Report
+
+Slack:                    inf
+  Source:                 inst1/counter_reg[4]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            inst1/counter_reg[28]/D
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        8.816ns  (logic 3.508ns (39.791%)  route 5.308ns (60.209%))
+  Logic Levels:           15  (CARRY4=10 FDCE=1 LUT4=1 LUT6=3)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         FDCE                         0.000     0.000 r  inst1/counter_reg[4]/C
+                         FDCE (Prop_fdce_C_Q)         0.456     0.456 r  inst1/counter_reg[4]/Q
+                         net (fo=2, unplaced)         0.994     1.450    inst1/counter_reg[4]
+                         CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.697     2.147 r  inst1/counter2_carry/CO[3]
+                         net (fo=1, unplaced)         0.009     2.156    inst1/counter2_carry_n_0
+                         CARRY4 (Prop_carry4_CI_O[2])
+                                                      0.256     2.412 f  inst1/counter2_carry__0/O[2]
+                         net (fo=1, unplaced)         0.905     3.317    inst1/counter2[7]
+                         LUT4 (Prop_lut4_I1_O)        0.301     3.618 f  inst1/clk_out_i_8/O
+                         net (fo=2, unplaced)         1.122     4.740    inst1/clk_out_i_8_n_0
+                         LUT6 (Prop_lut6_I4_O)        0.124     4.864 f  inst1/counter[0]_i_9/O
+                         net (fo=1, unplaced)         0.449     5.313    inst1/counter[0]_i_9_n_0
+                         LUT6 (Prop_lut6_I4_O)        0.124     5.437 f  inst1/counter[0]_i_8/O
+                         net (fo=30, unplaced)        1.181     6.618    inst1/counter[0]_i_8_n_0
+                         LUT6 (Prop_lut6_I2_O)        0.124     6.742 r  inst1/counter[0]_i_2/O
+                         net (fo=1, unplaced)         0.639     7.381    inst1/counter[0]_i_2_n_0
+                         CARRY4 (Prop_carry4_DI[1]_CO[3])
+                                                      0.507     7.888 r  inst1/counter_reg[0]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.009     7.897    inst1/counter_reg[0]_i_1_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     8.011 r  inst1/counter_reg[4]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     8.011    inst1/counter_reg[4]_i_1_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     8.125 r  inst1/counter_reg[8]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     8.125    inst1/counter_reg[8]_i_1_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     8.239 r  inst1/counter_reg[12]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     8.239    inst1/counter_reg[12]_i_1_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     8.353 r  inst1/counter_reg[16]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     8.353    inst1/counter_reg[16]_i_1_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     8.467 r  inst1/counter_reg[20]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     8.467    inst1/counter_reg[20]_i_1_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     8.581 r  inst1/counter_reg[24]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     8.581    inst1/counter_reg[24]_i_1_n_0
+                         CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.235     8.816 r  inst1/counter_reg[28]_i_1/O[0]
+                         net (fo=1, unplaced)         0.000     8.816    inst1/counter_reg[28]_i_1_n_7
+                         FDCE                                         r  inst1/counter_reg[28]/D
+  -------------------------------------------------------------------    -------------------
+
+
+
+

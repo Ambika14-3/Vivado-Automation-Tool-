@@ -1,0 +1,48 @@
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 8 CPUs
+INFO: [Timing 38-78] ReportTimingParams: -max_paths 1 -nworst 1 -delay_type max -sort_by slack.
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.2 (lin64) Build 2258646 Thu Jun 14 20:02:38 MDT 2018
+| Date         : Sat Feb 25 17:27:53 2023
+| Host         : nanodcserver running 64-bit CentOS Linux release 7.4.1708 (Core)
+| Command      : report_timing
+| Design       : top_a1_q1_rca_8bit
+| Device       : 7a35t-cpg236
+| Speed File   : -1  PRODUCTION 1.22 2018-03-21
+------------------------------------------------------------------------------------
+
+Timing Report
+
+Slack:                    inf
+  Source:                 A[1]
+                            (input port)
+  Destination:            Cout
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        9.806ns  (logic 4.253ns (43.370%)  route 5.553ns (56.630%))
+  Logic Levels:           6  (IBUF=1 LUT5=4 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    V14                                               0.000     0.000 r  A[1] (IN)
+                         net (fo=0)                   0.000     0.000    A[1]
+    V14                  IBUF (Prop_ibuf_I_O)         0.931     0.931 r  A_IBUF[1]_inst/O
+                         net (fo=2, routed)           1.719     2.649    A_IBUF[1]
+    SLICE_X0Y9           LUT5 (Prop_lut5_I1_O)        0.124     2.773 r  Sum_OBUF[3]_inst_i_2/O
+                         net (fo=3, routed)           0.656     3.430    w_1
+    SLICE_X0Y10          LUT5 (Prop_lut5_I4_O)        0.124     3.554 r  Sum_OBUF[5]_inst_i_2/O
+                         net (fo=3, routed)           0.656     4.210    w_3
+    SLICE_X0Y11          LUT5 (Prop_lut5_I4_O)        0.124     4.334 r  Sum_OBUF[7]_inst_i_2/O
+                         net (fo=3, routed)           0.427     4.761    w_5
+    SLICE_X0Y13          LUT5 (Prop_lut5_I4_O)        0.118     4.879 r  Cout_OBUF_inst_i_1/O
+                         net (fo=1, routed)           2.095     6.974    Cout_OBUF
+    K17                  OBUF (Prop_obuf_I_O)         2.832     9.806 r  Cout_OBUF_inst/O
+                         net (fo=0)                   0.000     9.806    Cout
+    K17                                                               r  Cout (OUT)
+  -------------------------------------------------------------------    -------------------
+
+
+
+

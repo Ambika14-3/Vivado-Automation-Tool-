@@ -1,0 +1,46 @@
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 8 CPUs
+INFO: [Timing 38-78] ReportTimingParams: -max_paths 1 -nworst 1 -delay_type max -sort_by slack.
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.2 (lin64) Build 2258646 Thu Jun 14 20:02:38 MDT 2018
+| Date         : Sat Feb 25 17:32:42 2023
+| Host         : nanodcserver running 64-bit CentOS Linux release 7.4.1708 (Core)
+| Command      : report_timing
+| Design       : top_a1_q2_array_multi_4bit
+| Device       : 7a35t-cpg236
+| Speed File   : -1  PRODUCTION 1.22 2018-03-21
+------------------------------------------------------------------------------------
+
+Timing Report
+
+Slack:                    inf
+  Source:                 A[2]
+                            (input port)
+  Destination:            Mult_out[5]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        9.916ns  (logic 4.131ns (41.665%)  route 5.784ns (58.335%))
+  Logic Levels:           5  (IBUF=1 LUT4=1 LUT6=2 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    V13                                               0.000     0.000 r  A[2] (IN)
+                         net (fo=0)                   0.000     0.000    A[2]
+    V13                  IBUF (Prop_ibuf_I_O)         0.934     0.934 r  A_IBUF[2]_inst/O
+                         net (fo=8, routed)           1.996     2.930    A_IBUF[2]
+    SLICE_X1Y6           LUT6 (Prop_lut6_I0_O)        0.124     3.054 r  Mult_out_OBUF[3]_inst_i_2/O
+                         net (fo=3, routed)           1.026     4.080    sum_r2_1
+    SLICE_X0Y7           LUT4 (Prop_lut4_I0_O)        0.152     4.232 r  Mult_out_OBUF[6]_inst_i_3/O
+                         net (fo=3, routed)           0.879     5.111    cout_r3_0
+    SLICE_X1Y7           LUT6 (Prop_lut6_I1_O)        0.332     5.443 r  Mult_out_OBUF[5]_inst_i_1/O
+                         net (fo=1, routed)           1.884     7.327    Mult_out_OBUF[5]
+    U18                  OBUF (Prop_obuf_I_O)         2.589     9.916 r  Mult_out_OBUF[5]_inst/O
+                         net (fo=0)                   0.000     9.916    Mult_out[5]
+    U18                                                               r  Mult_out[5] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+
+
+

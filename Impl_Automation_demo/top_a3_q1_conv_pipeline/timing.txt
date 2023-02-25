@@ -1,0 +1,80 @@
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 8 CPUs
+INFO: [Timing 38-78] ReportTimingParams: -max_paths 1 -nworst 1 -delay_type max -sort_by slack.
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.2 (lin64) Build 2258646 Thu Jun 14 20:02:38 MDT 2018
+| Date         : Sat Feb 25 20:17:22 2023
+| Host         : nanodcserver running 64-bit CentOS Linux release 7.4.1708 (Core)
+| Command      : report_timing
+| Design       : top_a3_q1_conv_pipeline
+| Device       : 7a35t-cpg236
+| Speed File   : -1  PRODUCTION 1.22 2018-03-21
+------------------------------------------------------------------------------------
+
+Timing Report
+
+Slack:                    inf
+  Source:                 j_reg[3]/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            stage_reg[1]/D
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        7.143ns  (logic 4.577ns (64.077%)  route 2.566ns (35.923%))
+  Logic Levels:           17  (CARRY4=12 FDRE=1 LUT2=3 LUT6=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         FDRE                         0.000     0.000 r  j_reg[3]/C
+                         FDRE (Prop_fdre_C_Q)         0.456     0.456 f  j_reg[3]/Q
+                         net (fo=7, unplaced)         0.505     0.961    j[3]
+                         LUT2 (Prop_lut2_I0_O)        0.321     1.282 r  j[31]_i_18/O
+                         net (fo=1, unplaced)         0.000     1.282    j[31]_i_18_n_0
+                         CARRY4 (Prop_carry4_DI[0]_CO[3])
+                                                      0.553     1.835 r  j_reg[31]_i_13/CO[3]
+                         net (fo=1, unplaced)         0.009     1.844    j_reg[31]_i_13_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     1.958 r  j_reg[31]_i_8/CO[3]
+                         net (fo=1, unplaced)         0.000     1.958    j_reg[31]_i_8_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     2.072 r  j_reg[31]_i_4/CO[3]
+                         net (fo=1, unplaced)         0.000     2.072    j_reg[31]_i_4_n_0
+                         CARRY4 (Prop_carry4_CI_CO[2])
+                                                      0.250     2.322 r  j_reg[31]_i_3/CO[2]
+                         net (fo=14, unplaced)        0.503     2.825    j_reg[31]_i_3_n_1
+                         LUT2 (Prop_lut2_I1_O)        0.310     3.135 r  stage[1]_i_93/O
+                         net (fo=1, unplaced)         0.000     3.135    stage[1]_i_93_n_0
+                         CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.532     3.667 r  stage_reg[1]_i_84/CO[3]
+                         net (fo=1, unplaced)         0.009     3.676    stage_reg[1]_i_84_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     3.790 r  stage_reg[1]_i_92/CO[3]
+                         net (fo=1, unplaced)         0.000     3.790    stage_reg[1]_i_92_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     3.904 r  stage_reg[1]_i_91/CO[3]
+                         net (fo=1, unplaced)         0.000     3.904    stage_reg[1]_i_91_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     4.018 r  stage_reg[1]_i_90/CO[3]
+                         net (fo=1, unplaced)         0.000     4.018    stage_reg[1]_i_90_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     4.132 r  stage_reg[1]_i_76/CO[3]
+                         net (fo=1, unplaced)         0.000     4.132    stage_reg[1]_i_76_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     4.246 r  stage_reg[1]_i_75/CO[3]
+                         net (fo=1, unplaced)         0.000     4.246    stage_reg[1]_i_75_n_0
+                         CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.348     4.594 r  stage_reg[1]_i_52/O[1]
+                         net (fo=2, unplaced)         0.622     5.216    i[25]
+                         LUT2 (Prop_lut2_I0_O)        0.332     5.548 r  stage[1]_i_22/O
+                         net (fo=1, unplaced)         0.000     5.548    stage[1]_i_22_n_0
+                         CARRY4 (Prop_carry4_DI[0]_CO[3])
+                                                      0.553     6.101 r  stage_reg[1]_i_5/CO[3]
+                         net (fo=1, unplaced)         0.918     7.019    stage_reg[1]_i_5_n_0
+                         LUT6 (Prop_lut6_I5_O)        0.124     7.143 r  stage[1]_i_1/O
+                         net (fo=1, unplaced)         0.000     7.143    stage[1]_i_1_n_0
+                         FDRE                                         r  stage_reg[1]/D
+  -------------------------------------------------------------------    -------------------
+
+
+
+

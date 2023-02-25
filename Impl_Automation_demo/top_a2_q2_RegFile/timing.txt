@@ -1,0 +1,40 @@
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 2 CPUs
+INFO: [Timing 38-78] ReportTimingParams: -max_paths 1 -nworst 1 -delay_type max -sort_by slack.
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
+| Date         : Sat Feb 25 20:48:30 2023
+| Host         : LAPTOP-0QK6D3BU running 64-bit major release  (build 9200)
+| Command      : report_timing
+| Design       : RegFile
+| Device       : 7a100t-csg324
+| Speed File   : -1  PRODUCTION 1.23 2018-06-13
+------------------------------------------------------------------------------------
+
+Timing Report
+
+Slack:                    inf
+  Source:                 register_reg_1/CLKARDCLK
+                            (rising edge-triggered cell RAMB18E1)
+  Destination:            q2[5]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        10.006ns  (logic 5.109ns (51.062%)  route 4.897ns (48.938%))
+  Logic Levels:           2  (OBUF=1 RAMB18E1=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    RAMB18_X0Y30         RAMB18E1                     0.000     0.000 r  register_reg_1/CLKARDCLK
+    RAMB18_X0Y30         RAMB18E1 (Prop_ramb18e1_CLKARDCLK_DOADO[5])
+                                                      2.454     2.454 r  register_reg_1/DOADO[5]
+                         net (fo=1, routed)           4.897     7.351    q2_OBUF[5]
+    U6                   OBUF (Prop_obuf_I_O)         2.655    10.006 r  q2_OBUF[5]_inst/O
+                         net (fo=0)                   0.000    10.006    q2[5]
+    U6                                                                r  q2[5] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+
+
+
