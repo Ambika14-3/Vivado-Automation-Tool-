@@ -1,0 +1,4 @@
+File Name,Signal Power(W),Logic Power(W),Static Power(W),DC Power(W),Total Power(W),DataPath Delay,F7_Muxes,LUT_as_Memory,LUT_as_Logic,Slice_LUTs,LUT1,LUT2,LUT3,LUT4,LUT5,LUT6,LUT7,LUT_as_Memory2,LUT_as_Logic2,Slice_LUTs2,LUTs_difference
+top_CLA8.v,0.167,0.065,0.088,4.807,4.895,9.882,0,0,13,13,0,1,2,3,3,6,0,0,13,4,9
+top_CLA16.v,0.5,0.194,0.156,10.89,11.046,12.463,0,0,35,35,0,6,4,8,5,22,0,0,35,10,25
+top_CLA32.v,1.749,0.505,0.485,22.729,23.213 (Junction temp exceeded!),18.806,0,0,96,96,0,26,9,14,15,59,0,0,96,33,63
