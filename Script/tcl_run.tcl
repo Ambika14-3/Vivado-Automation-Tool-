@@ -19,8 +19,8 @@ puts $fname_wo_extension
 reset_run synth_1
 launch_runs synth_1 -jobs 16
 
-reset_run impl_1
-launch_runs impl_1 -jobs 16
+#reset_run impl_1
+#launch_runs impl_1 -jobs 16
 
 
 set x 0
